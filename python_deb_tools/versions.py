@@ -19,10 +19,12 @@ def get_version_list():
 
 
 def get_version_list_json():
+    """ Return version list as json. """
     return json.dumps(get_version_list())
 
 
 def update_control_version(file_path, version):
+    """ Updates the version number in a provided debian control file. """
     for line in fileinput.input(file_path, inplace=1):
         if 'Version: ' in line:
             old_ver = line.split(' ')[1]

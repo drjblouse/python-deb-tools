@@ -1,3 +1,4 @@
+""" Setup file for package installation. """
 #!/usr/bin/env python
 import python_deb_tools
 from setuptools import setup, find_packages
