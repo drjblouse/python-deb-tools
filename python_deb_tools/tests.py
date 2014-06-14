@@ -12,7 +12,7 @@ class TestVersionFunctions(unittest.TestCase):
         version_dict = get_version_list()
         version_json = get_version_list_json()
         self.assertIsNotNone(version_dict)
-        self.assertGreaterEqual(len(version_dict), 500)
+        self.assertGreaterEqual(len(version_dict), 50)
         self.assertIsNotNone(version_json)
         temp = json.loads(version_json)
         self.assertEquals(len(temp), len(version_dict))
