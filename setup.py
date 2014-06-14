@@ -2,7 +2,7 @@
 import python_deb_tools
 from setuptools import setup, find_packages
 
-requires = ['invoke']
+requires = ['invoke', 'flake8']
 
 with open('README.md') as f:
     readme = f.read()
