@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 import python_deb_tools
-from setuptools import setup
+from setuptools import setup, find_packages
 
 requires = ['invoke']
 
 with open('README.md') as f:
     readme = f.read()
+
+packages = find_packages()
 
 setup(
     name=python_deb_tools.__name__,
@@ -15,6 +17,6 @@ setup(
     author=python_deb_tools.__author__,
     author_email='jblouse@linux.com',
     url='https://github.com/drjblouse/python-deb-tools.git',
-    packages='python_deb_tools',
+    packages=packages,
     install_requires=requires,
 )
