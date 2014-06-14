@@ -1,4 +1,5 @@
 """ Tests for debian tools. """
+# pylint: disable=R0904
 import json
 import unittest
 from python_deb_tools.versions import get_version_list, get_version_list_json

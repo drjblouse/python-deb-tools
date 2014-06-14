@@ -9,8 +9,8 @@ from subprocess import Popen, PIPE, STDOUT
 def get_version_list():
     """ Read all packages with their current versions. """
     version_list = dict()
-    p = Popen('dpkg -l', shell=True, stdout=PIPE, stderr=STDOUT)
-    for line in iter(p.stdout.readline, ''):
+    process = Popen('dpkg -l', shell=True, stdout=PIPE, stderr=STDOUT)
+    for line in iter(process.stdout.readline, ''):
         split_line = line.split()
         if len(split_line) > 3:
             if split_line[2] != 'Version':  # ignore header row
